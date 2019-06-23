@@ -21,7 +21,7 @@ import seaborn as sns
 from google.colab import files
 
 file = files.upload()
-
+#Gives the colummn information
 cols = ['ID','Clump Thickness', 
 'Uniformity of Cell Size', 
 'Uniformity of Cell Shape', 
@@ -46,11 +46,11 @@ df = df.dropna()
 df.head()
 
 df.describe()
-
+#Keep a set of original dataframe
 df1 = df
 
 df = df.set_index("ID")
-
+# Have a quick look at the various data properties using histogram. 
 df.hist(bins=10,color='red', edgecolor='black', linewidth=1.0,
            xlabelsize=10, ylabelsize=10, grid=False,figsize=(15,15),layout = (5,2))
 plt.xlabel = df["Class"]
